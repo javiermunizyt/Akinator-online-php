@@ -8,7 +8,7 @@ $consultas = [];
 
 //PONEMOS LAS CONSULTAS EN UN ARRAY
 array_push($consultas,"DROP TABLE arbol");
-
+array_push($consultas,"DROP TABLE partida");
 
 //OBTENEMOS EL TAMAÑO DEL ARRAY
 $tam = count($consultas);

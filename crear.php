@@ -33,7 +33,13 @@ $consulta = "UPDATE arbol SET texto = '".$caracteristicas."',pregunta = TRUE WHE
 mysqli_query($enlace, $consulta);
 
 
-//VOLVEMOS A LA PÁGINA
-header("Location:index.php?n=1");
+//----------------------------------------------
+//GUARDAMOS EL LOG DE LA PARTIDA
+$consulta = "INSERT INTO partida (personaje,acierto) VALUES('".$nombre."',FALSE);";
+mysqli_query($enlace, $consulta);
+
+
+//VOLVEMOS A LA PÁGINA PRINCIPAL
+header("Location:index.php?n=1&r=0");
 
 ?>
